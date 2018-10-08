@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink,Route } from "react-router-dom";
 import CountryDetail from "./CountryDetail";
 import countries from './countries.json'
-
+require('dotenv').config();
 
 export default class App extends React.Component {
   constructor(){
@@ -10,10 +10,11 @@ export default class App extends React.Component {
     this.state={countries}
   }
   render() {
+    console.log(process)
     const countries=[...this.state.countries]
     return (
       <div>
-        <header><h1>WikiCountries</h1></header>
+        <header><h1>WikiCountries {process.env.REACT_APP_ENVIRONMENT}</h1></header>
         <div className="row">
           <div className="list-group col-5">
             {countries.map(c=>{
