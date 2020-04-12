@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink,Route } from "react-router-dom";
 import CountryDetail from "./CountryDetail";
 import countries from './countries.json'
-require('dotenv').config();
+
 
 export default class App extends React.Component {
   constructor(){
